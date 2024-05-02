@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.output {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#outputDisplay {
+    margin-top: 20px;
+    max-width: 300px;
+    text-align: left;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+    <header>
+        <h1>Brain Tumor Classifier</h1>
+    </header>
+    <main>
+        <div class="input">
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="uploadImage()">Upload Image</button>
+        </div>
+        <div class="output">
+            <button onclick="showLogisticRegressionOutput()">Logistic Regression</button>
+            <button onclick="showCNNOutput()">CNN</button>
+            <button onclick="showVGGOutput()">VGG</button>
+            <div id="outputDisplay"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
